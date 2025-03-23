@@ -1,5 +1,5 @@
 import { useState } from "react";
-import '../estilo/main.css';
+// import '../estilo/main.css';
 
 function Login() {
   const [email, setEmail] = useState("");

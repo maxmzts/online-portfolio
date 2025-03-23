@@ -1,4 +1,3 @@
-import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
 // Páginas
@@ -9,11 +8,15 @@ import AccessibilityPage from "./paginas/Accesibilidad";
 
 // Proveedores
 import { ThemeProvider } from './paginas/ThemeContext';
+import Navbar from './paginas/components/Navbar/Navbar';
+import Hero from './paginas/components/Hero/Hero';
 
 function App() {
   return (
     <div className="App">
-      <ThemeProvider>
+      <Navbar/>
+      <Hero/>
+      {/* <ThemeProvider>
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<HomePage />} />
@@ -22,7 +25,7 @@ function App() {
             <Route path="/accessibility" element={<AccessibilityPage />} />
           </Routes>
         </BrowserRouter>
-      </ThemeProvider>
+      </ThemeProvider> */}
     </div>
   );
 }
