@@ -1,0 +1,321 @@
+/* CSS global */
+
+/* Importación de la tipografía INTER */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/* Tipografías para dislexia */
+/* OpenDyslexic Regular */
+@font-face {
+    font-family: 'OpenDyslexic';
+    src: url('../../public/fonts/OpenDyslexic-Regular.woff2') format('woff2');
+    font-weight: 300; 
+    font-style: normal;
+}
+
+/* OpenDyslexic Italic */
+@font-face {
+    font-family: 'OpenDyslexic';
+    src: url('../../public/fonts/OpenDyslexic-Italic.woff2') format('woff2');
+    font-weight: 300; 
+    font-style: italic;
+}
+
+/* OpenDyslexic Bold */
+@font-face {
+    font-family: 'OpenDyslexic';
+    src: url('../../public/fonts/OpenDyslexic-Bold.woff2') format('woff2');
+    font-weight: 700; 
+    font-style: normal;
+}
+
+/* OpenDyslexic Bold Italic*/
+@font-face {
+    font-family: 'OpenDyslexic';
+    src: url('../../public/fonts/OpenDyslexic-Bold-Italic.woff2') format('woff2');
+    font-weight: 700; 
+    font-style: italic;
+}
+
+/* Variables del proyecto */
+:root {
+    /* Typography */
+    --font: 'Inter', sans-serif;
+    --font-alt: 'Courier New', monospace;
+    --font-dyslexia: 'OpenDyslexic', normal;
+    --text-xs: 12px;
+    --text-sm: 14px;
+    --text-md: 16px;
+    --text-lg: 20px;
+    --text-xl: 24px;
+    --text-xxl: 32px;
+  
+    /* Spacing */
+    --spacing-xs: 4px;
+    --spacing-sm: 8px;
+    --spacing-md: 16px;
+    --spacing-lg: 24px;
+    --spacing-xl: 32px;
+    --spacing-xxl: 40px;
+  
+    /* Border Radius */
+    --radius-sm: 6px;
+    --radius-md: 10px;
+    --radius-lg: 14px;
+    --radius-xl: 16px;
+  
+    /* Shadows */
+    --shadow-sm: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0px 4px 8px rgba(0, 0, 0, 0.15);
+    --shadow-lg: 0px 6px 12px rgba(0, 0, 0, 0.2);
+  
+    /* Transitions */
+    --transition-fast: 0.2s ease-in-out;
+    --transition-normal: 0.3s ease-in-out;
+    --transition-slow: 0.5s ease-in-out;
+
+    /* Tema claro */
+    --primary: #7400E6;
+    --primary-transparent: #7600E632;
+    --primary-hover: #7700e6c5;
+    /* --secondary: #2ecc71; */
+    --danger: #D80000;
+    --warning: #E6B000;
+    --background: #FAFAFA;
+    --foreground: #ffffff;
+    --foreground-hover: #eeeeee;
+    --text-primary: #202020;
+    --text-button: #FAFAFA;
+    --text-secondary: #666666;
+    --border: #dddddd;
+    --link-color: #0000EE; /* Azul estándar */
+    --link-hover: #551A8B; /* Púrpura oscuro estándar */
+    --link-visited: #551A8B; /* Igual que hover */
+}
+
+/* Tema oscuro */
+[data-theme="oscuro"] {
+    --primary: #36F6E2;
+    --primary-transparent: #36F6E232;
+    --primary-hover: #36f6e3c5;
+    --background: #212121;
+    --foreground: #303030;
+    --foreground-hover: #454545;
+    --text-primary: #ffffff;
+    --text-button: #212121;
+    --text-secondary: #c2c2c2;
+    --link-color: #4A90E2; /* Azul accesible */
+    --link-hover: #F8C32D; /* Amarillo fuerte para resaltar */
+    --link-visited: #B47AE0; /* Púrpura accesible */
+}
+
+/* Tema tritanopia */
+[data-theme="tritanopia"] {
+    --primary: #7B1C1C;
+    --primary-transparent: #7B1C1C32;
+    --primary-hover: #7B1C1Cc5;
+    /* El resto de colores son los mismos que el tema claro */
+}
+
+/* Configuración global de la plantilla */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%; /* hace que 10px sean 1rem */
+}
+
+/* Cuerpo */
+
+body {
+    box-sizing: border-box;
+    color: var(--text-primary);
+    font-size: 1.6rem;
+    font-family: var(--font);
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    background-color: var(--background);
+    transition: font-family 0.3s ease;
+}
+
+body.dyslexic {
+    font-family: var(--font-dyslexia);
+}
+
+h1 {
+    margin-bottom: 4rem !important;
+}
+
+/* Para que se vean bien en cualquier tema */
+a {
+    color: var(--link-color);
+    &:hover { color: var(--link-hover); }
+    &:visited { color: var(--link-visited); }
+}
+
+/* Alteraciones tipografía */
+
+.text-bold{
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 650;
+    font-style: normal;
+}
+
+.text-thin{
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+}
+
+
+
+/* ---FORMULARIOS--- */
+
+.form-container {
+    background-color: var(--foreground);
+    border-radius: var(--radius-md);
+    box-shadow: 0px 187px 75px rgba(0, 0, 0, 0.02), 0px 105px 63px rgba(0, 0, 0, 0.1), 0px 47px 47px rgba(0, 0, 0, 0.18), 0px 12px 26px rgba(0, 0, 0, 0.2), 0px 0px 10px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 55rem;
+    padding: 3rem 4rem; 
+    transition: padding 1s ease;
+    form * {
+        margin: 1rem 0;
+    }
+    @media(width >= 550px){
+        padding: 5rem 10rem;
+    }
+}
+    
+/* Para login y registro (cuadro centrado flotante)*/
+.auth-container {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    height: 100vh; /* Ocupa toda la altura de la pantalla */
+}
+
+/* ----------------- */
+
+
+/* CSS para mostrar código */
+
+pre {
+    background: #f4f4f4;
+    border: 1px solid #ddd;
+    border-left: 3px solid #f36d33;
+    color: #666;
+    page-break-inside: avoid;
+    font-family: monospace;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 1.6em;
+    max-width: 100%;
+    overflow: auto;
+    padding: 1em 1.5em;
+    display: block;
+    word-wrap: break-word;
+}
+
+code {
+    font-family: 'Courier New', Courier, monospace !important;
+}
+
+
+/* BOTONES */
+
+button {
+    padding: 13px 28px;
+    border-radius: var(--radius-sm);
+    border: none;
+    background-color: var(--primary);
+    color: var(--text-button);
+    font-weight: 500;
+    transition: all .3s ease;
+    &:hover {
+        background-color: var(--primary-hover);
+    }
+}
+
+
+/* INPUTS CON ANIMACIÓN */
+
+input {
+    color: var(--text-primary);
+}
+
+.input-container {
+    position: relative;
+    margin: 2rem 0 1rem !important;
+}
+  
+.input-container input[type="text"] {
+    font-size: 16px;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    padding: 5px 5px;
+    background-color: transparent;
+    outline: none;
+    transition: background-color .33s ease-out;
+    &:hover{
+        background-color: var(--foreground-hover);
+    }
+    &:focus {
+        background-color: var(--primary-transparent);
+        -webkit-transition: background-color 500ms ease-out;
+        -ms-transition: background-color 500ms ease-out;
+    }
+}
+  
+.input-container .label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+  
+.input-container input[type="text"]:focus ~ .label,
+.input-container input[type="text"]:valid ~ .label {
+    top: -2.3rem;
+}
+  
+.input-container .underline {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background-color: var(--primary);
+    transform: scaleX(0);
+    transition: all 0.3s ease;
+}
+  
+.input-container input[type="text"]:focus ~ .underline,
+.input-container input[type="text"]:valid ~ .underline {
+    transform: scaleX(1);
+}
+  
+
+/* Clases estilo framework de CSS */
+
+/* SIZING */
+
+.full-width{
+    width: 100%;
+}
+
+/* Alignment */
+
+.centered {
+    text-align: center;
+}
