@@ -13,6 +13,7 @@ import Hero from './paginas/components/Hero/Hero';
 import About from './paginas/components/About/About';
 import Projects from './paginas/components/Projects/Projects';
 import Contact from './paginas/components/Contact/Contact';
+import Footer from './paginas/components/Footer/Footer';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
       <About/>
       <Projects/>
       <Contact/>
+      <Footer/>
       {/* <ThemeProvider>
         <BrowserRouter>
           <Routes>
