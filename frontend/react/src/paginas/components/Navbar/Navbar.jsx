@@ -1,6 +1,6 @@
 import React from 'react'
 import './Navbar.css'
-import logo from '../../../assets/logoipsum-362.svg'
+import logo from '../../../assets/logo.svg'
 
 const Navbar = () => {
     return (
@@ -12,7 +12,7 @@ const Navbar = () => {
                 <li>Portfolio</li>
                 <li>Contact</li>
             </ul>
-            <div className="nav-connect">Connect With Me</div>
+            <button className="gradient-button">Connect With Me</button>
         </div>
     )
 }

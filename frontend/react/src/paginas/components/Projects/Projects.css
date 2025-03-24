@@ -1,3 +1,5 @@
+@import '../../../index.css';
+
 .projects{
     display: flex;
     flex-direction: column;
@@ -33,19 +35,12 @@
     h3 {
         font-size: 25px;
         font-weight: 600;
-        background: linear-gradient( 270deg, #DA7C25, #B923E1);
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
     }
     p{
         color: #202020;
     }
     &:hover{
-        border: 2px solid #B923E1;
         background-image: linear-gradient(45deg, #fdc0d2, #ffe6b8);;
-        transform: scale(1.05);
-        transition: 0.4s;
     }
 }
 

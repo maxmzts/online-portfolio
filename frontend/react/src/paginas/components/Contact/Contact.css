@@ -27,10 +27,6 @@
     h3{
         font-size: 40px;
         font-weight: 700;
-        background: linear-gradient( 270deg, #DA7C25, #B923E1);
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
     }
     p{
         color: #202020;
@@ -44,7 +40,7 @@
     flex-direction: column;
     gap: 30px;
     color: #202020;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .contact-detail{
@@ -63,39 +59,12 @@
         color: #202020;
         font-weight: 500;
     }
-    input {
-        border: none;
+    .form-input{
         width: 700px;
-        height: 78px;
-        padding-left: 20px;
-        border-radius: 10px;
-        background-color: rgb(255, 244, 230);
-        color: #202020;
-        font-size: 16px;
+        height: 75px;
     }
     textarea{
-        width: 675px;
-        height: 200px;
         padding: 25px;
-        border: none;
-        border-radius: 10px;
-        background-color: rgb(255, 244, 230);
-        color: #202020;
-        font-size: 16px;
+        height: 200px !important;
     }
-}
-
-.contact-submit{
-    padding: 20px 45px;
-    border: none;
-    border-radius: 50px;
-    background: linear-gradient( 264deg, #DA7C25, #B923E1);
-    cursor: pointer;
-    font-size: 22px;
-    transition: 0.5s;
-    margin-bottom: 80px;
-    &:hover{
-        transform: scale(1.05);
-    }
-    
 }

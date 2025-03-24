@@ -9,9 +9,9 @@ const Projects = () => {
             <h2 className="projects-title">My Projects</h2>
             <div className="projects-container">
                 {Projects_Data.map((project,index)=>{
-                    return <div key={index} className="projects-format">
+                    return <div key={index} className="projects-format scale-hover">
                         {/* <h3>{project.p_no}</h3> */}
-                        <h3>{project.p_name}</h3>
+                        <h3 className='gradient-text'>{project.p_name}</h3>
                         <p>{project.p_desc}</p>
                         <div className="projects-readmore">
                             <p>Read More</p>

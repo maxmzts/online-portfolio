@@ -26,8 +26,8 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
-    font-size: 24px;
-    font-weight: 500;
+    font-size: 22px;
+    font-weight: 400;
 }
 
 .about-skills{
@@ -54,10 +54,6 @@
         border-radius: 50px;
         background: linear-gradient( 264deg, #DA7C25 -5.09%, #B923E1 106.28%);
     }
-    &:hover{
-        transform: scale(1.05);
-        transition: 0.3s;
-    }
 }
 
 .about-achievements{
@@ -76,18 +72,10 @@
     h3 {
         font-size: 48px;
         font-weight: 700;
-        background: linear-gradient( 264deg, #DA7C25 50.49%, #B923E1 90.25%);
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
     }
     p { 
         font-size: 22px;
         font-weight: 500;
-    }
-    &:hover{
-        transform: scale(1.05);
-        transition: 0.5s;
     }
 }
 

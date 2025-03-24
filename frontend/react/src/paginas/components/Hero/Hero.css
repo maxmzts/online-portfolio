@@ -16,12 +16,6 @@
     text-align: center;
     width: 70%;
     font-size: 50px;
-    span {
-        background: linear-gradient( 270deg, #DA7C25, #B923E1);
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
 }
 
 .hero p{
@@ -34,28 +28,16 @@
 .hero-action{
     display: flex;
     align-items: center;
-    gap: 25px;
-    font-size: 24px;
-    font-weight: 500;
-    margin-bottom: 50px;
-}
-
-.hero-connect{
-    padding: 25px 45px;
-    border-radius: 50px;
-    background: linear-gradient( 264deg, #DA7C25, #B923E1);
-    cursor: pointer;
-    transition: 0.5s;
-    &:hover{
-        border: 2px solid black;
-    }
+    gap: 35px;
+    margin-bottom: 170px;
 }
 
 .hero-resume{
+    font-size: 20px;
     padding: 25px 75px;
     border-radius: 50px;
     border: 2px solid #000;
-    cursor: pointer;
+    background: transparent;
     transition: 0.5s;
     &:hover{
         border-color: #b415ff;

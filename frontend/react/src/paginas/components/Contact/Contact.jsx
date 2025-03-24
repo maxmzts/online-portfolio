@@ -8,7 +8,7 @@ const Contact = () => {
             <h2 className="contact-title">Contact Me</h2>
             <div className="contact-section">
                 <div className="contact-left">
-                    <h3>Let's talk</h3>
+                    <h3 className='gradient-text'>Let's talk</h3>
                     <p>Feel free to contact me anytime.</p>
                     <div className="contact-details">
                         <div className="contact-detail">Email: maximomzts@gmail.com</div>
@@ -18,12 +18,12 @@ const Contact = () => {
                 </div>
                 <form className="contact-right">
                     <label htmlFor="name">Your Name</label>
-                    <input type="text" placeholder='Enter your name' name='name'/>
+                    <input className='form-input' type="text" placeholder='Enter your name' name='name'/>
                     <label htmlFor="email">Your Name</label>
-                    <input type="email" placeholder='Enter your email' name='email'/>
+                    <input className='form-input' type="email" placeholder='Enter your email' name='email'/>
                     <label htmlFor="name">Write your message</label>
-                    <textarea name="message" placeholder='Enter your message'></textarea>
-                    <button type='submit' className="contact-submit">Submit</button>
+                    <textarea className='form-input' name="message" placeholder='Enter your message'></textarea>
+                    <button type='submit' className="gradient-button">Submit</button>
                 </form>
             </div>
         </div>

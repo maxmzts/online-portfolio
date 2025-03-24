@@ -4,13 +4,57 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: inherit;
 }
 body {
+    box-sizing: border-box;
     height: 100vh;
     background-color: #e7dfcf;
     color: rgb(29, 24, 20);
     font-family: 'Poppins';
 }
+
+.gradient-button {
+    font-size: 20px;
+    padding: 25px 45px;
+    border: 2px solid transparent;
+    border-radius: 50px;
+    background: linear-gradient( 264deg, #DA7C25, #B923E1);
+    transition: 0.5s;
+    &:hover{
+        border: 2px solid black;
+    }
+}
+
+.gradient-text{
+    background: linear-gradient( 270deg, #DA7C25, #B923E1);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.form-input {
+    border: none;
+    padding-left: 20px;
+    border-radius: 10px;
+    background-color: rgb(255, 244, 230);
+    color: #202020;
+    font-size: 16px;
+}
+
+.scale-hover:hover{
+    transform: scale(1.05);
+    transition: 0.5s;
+}
+
+
+
+
+
+
+
+
+
 
 /* POPPINS */
 
