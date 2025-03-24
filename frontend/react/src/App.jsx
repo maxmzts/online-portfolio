@@ -10,12 +10,14 @@ import AccessibilityPage from "./paginas/Accesibilidad";
 import { ThemeProvider } from './paginas/ThemeContext';
 import Navbar from './paginas/components/Navbar/Navbar';
 import Hero from './paginas/components/Hero/Hero';
+import About from './paginas/components/About/About';
 
 function App() {
   return (
     <div className="App">
       <Navbar/>
       <Hero/>
+      <About/>
       {/* <ThemeProvider>
         <BrowserRouter>
           <Routes>
