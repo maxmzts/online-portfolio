@@ -1,0 +1,101 @@
+.contact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    margin: 30px 50px;
+}
+
+.contact-title{
+    position: relative;
+}
+.contact-title{
+    padding: 0 30px;
+    font-size: 50px;
+}
+
+.contact-section{
+    display: flex;
+    gap: 50px;
+}
+
+.contact-left{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    h3{
+        font-size: 40px;
+        font-weight: 700;
+        background: linear-gradient( 270deg, #DA7C25, #B923E1);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    p{
+        color: #202020;
+        font-size: 24px;
+        line-height: 35px;
+    }
+}
+
+.contact-details{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    color: #202020;
+    font-size: 20px;
+}
+
+.contact-detail{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.contact-right{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 25px;
+    label{
+        font-size: 20px;
+        color: #202020;
+        font-weight: 500;
+    }
+    input {
+        border: none;
+        width: 700px;
+        height: 78px;
+        padding-left: 20px;
+        border-radius: 10px;
+        background-color: rgb(255, 244, 230);
+        color: #202020;
+        font-size: 16px;
+    }
+    textarea{
+        width: 675px;
+        height: 200px;
+        padding: 25px;
+        border: none;
+        border-radius: 10px;
+        background-color: rgb(255, 244, 230);
+        color: #202020;
+        font-size: 16px;
+    }
+}
+
+.contact-submit{
+    padding: 20px 45px;
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient( 264deg, #DA7C25, #B923E1);
+    cursor: pointer;
+    font-size: 22px;
+    transition: 0.5s;
+    margin-bottom: 80px;
+    &:hover{
+        transform: scale(1.05);
+    }
+    
+}

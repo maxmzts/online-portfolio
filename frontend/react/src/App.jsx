@@ -12,6 +12,7 @@ import Navbar from './paginas/components/Navbar/Navbar';
 import Hero from './paginas/components/Hero/Hero';
 import About from './paginas/components/About/About';
 import Projects from './paginas/components/Projects/Projects';
+import Contact from './paginas/components/Contact/Contact';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       <Hero/>
       <About/>
       <Projects/>
+      <Contact/>
       {/* <ThemeProvider>
         <BrowserRouter>
           <Routes>
