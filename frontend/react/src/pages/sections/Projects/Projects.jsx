@@ -2,7 +2,6 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Projects.css';
 
-import NavigateButton from '../../components/NavigateButton/NavigateButton';
 import Projects_Data from './projects-data';
 import arrow_icon from '../../../assets/arrow.svg';
 

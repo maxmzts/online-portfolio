@@ -1,16 +1,16 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
 // Páginas
-import HomePage from "./paginas/Home";
-import LoginPage from "./paginas/Login";
-import RegisterPage from "./paginas/Register";
-import AccessibilityPage from "./paginas/Accesibilidad";
+import HomePage from "./pages/Home";
+import LoginPage from "./pages/Login";
+import RegisterPage from "./pages/Register";
+import AccessibilityPage from "./pages/Accesibilidad";
 
 // Proveedores
-import { ThemeProvider } from './paginas/ThemeContext';
-import Navbar from './paginas/components/Navbar/Navbar';
-import Footer from './paginas/components/Footer/Footer';
-import Portfolio from './paginas/Portfolio';
+import { ThemeProvider } from './pages/ThemeContext';
+import Navbar from './pages/components/Navbar/Navbar';
+import Footer from './pages/components/Footer/Footer';
+import Portfolio from './pages/Portfolio';
 
 function App() {
   return (
