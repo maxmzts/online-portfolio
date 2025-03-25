@@ -1,9 +1,14 @@
-import React from 'react'
-import './Projects.css'
-import Projects_Data from './projects-data'
-import arrow_icon from '../../../assets/arrow.svg'
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
+import './Projects.css';
+
+import NavigateButton from '../../components/NavigateButton/NavigateButton';
+import Projects_Data from './projects-data';
+import arrow_icon from '../../../assets/arrow.svg';
 
 const Projects = () => {
+    const navigate = useNavigate();
+
     return (
         <div className="projects">
             <h2 className="projects-title">My Projects</h2>
@@ -20,7 +25,7 @@ const Projects = () => {
                     </div>
                 })}
             </div>
-            <button className="projects-showmore">
+            <button className="projects-showmore" onClick={() => navigate('/portfolio')}>
                 Show More <img src={arrow_icon} alt="" aria-hidden="true"/>
             </button>
         </div>

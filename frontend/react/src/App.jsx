@@ -9,31 +9,25 @@ import AccessibilityPage from "./paginas/Accesibilidad";
 // Proveedores
 import { ThemeProvider } from './paginas/ThemeContext';
 import Navbar from './paginas/components/Navbar/Navbar';
-import Hero from './paginas/components/Hero/Hero';
-import About from './paginas/components/About/About';
-import Projects from './paginas/components/Projects/Projects';
-import Contact from './paginas/components/Contact/Contact';
 import Footer from './paginas/components/Footer/Footer';
+import Portfolio from './paginas/Portfolio';
 
 function App() {
   return (
     <div className="App">
-      <Navbar/>
-      <Hero/>
-      <About/>
-      <Projects/>
-      <Contact/>
-      <Footer/>
-      {/* <ThemeProvider>
-        <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/login" element={<LoginPage />} />
-            <Route path="/register" element={<RegisterPage />} />
-            <Route path="/accessibility" element={<AccessibilityPage />} />
-          </Routes>
-        </BrowserRouter>
-      </ThemeProvider> */}
+        <ThemeProvider>
+            <Navbar/>
+            <BrowserRouter>
+            <Routes>
+                <Route path="/" element={<HomePage />} />
+                <Route path="/login" element={<LoginPage />} />
+                <Route path="/register" element={<RegisterPage />} />
+                <Route path="/accessibility" element={<AccessibilityPage />} />
+                <Route path="/portfolio" element={<Portfolio />} />
+            </Routes>
+            </BrowserRouter>
+            <Footer/>
+        </ThemeProvider>
     </div>
   );
 }

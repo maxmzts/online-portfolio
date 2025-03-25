@@ -4,17 +4,13 @@ import Projects from './sections/Projects/Projects';
 import Contact from './sections/Contact/Contact';
 import BackToTop from './components/BackToTop/BackToTop';
 
-function Home() {
+function Portfolio() {
 return (
-<main className="Home">
-    <Hero/>
-    <About/>
+<main className="Portfolio">
     <Projects/>
-    <Contact/>
-    <BackToTop/>
 </main>
 );
 }
 
-export default Home;
+export default Portfolio;
   
