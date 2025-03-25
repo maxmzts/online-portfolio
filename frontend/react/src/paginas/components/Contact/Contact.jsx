@@ -1,6 +1,8 @@
 import React from 'react'
 import './Contact.css'
-import arrow_icon from '../../../assets/arrow.svg'
+import mail_icon from '../../../assets/mail.svg'
+import location_icon from '../../../assets/map-pin.svg'  
+import linkedin_icon from '../../../assets/linkedin.svg'  
 
 const Contact = () => {
     return (
@@ -11,9 +13,9 @@ const Contact = () => {
                     <h3 className='gradient-text'>Let's talk</h3>
                     <p>Feel free to contact me anytime.</p>
                     <div className="contact-details">
-                        <div className="contact-detail">Email: maximomzts@gmail.com</div>
-                        <div className="contact-detail">Phone: number</div>
-                        <div className="contact-detail">Location: Spain</div>
+                        <div className="contact-detail"><img src={mail_icon} aria-hidden="true" /> maximomzts@gmail.com</div>
+                        <div className="contact-detail"><img src={linkedin_icon} aria-hidden="true" /> <a href="https://www.linkedin.com">Linked In</a></div>
+                        <div className="contact-detail"><img src={location_icon} aria-hidden="true" /> Spain</div>
                     </div>
                 </div>
                 <form className="contact-right">

@@ -41,6 +41,7 @@
     gap: 30px;
     color: #202020;
     font-size: 18px;
+    img { width: 25px;}
 }
 
 .contact-detail{
@@ -64,6 +65,7 @@
         height: 75px;
     }
     textarea{
+        font-family: 'Poppins';
         padding: 25px;
         height: 200px !important;
     }
