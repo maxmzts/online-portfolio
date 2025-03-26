@@ -1,10 +1,13 @@
 const asyncHandler = require('express-async-handler')
 
+const Project = require('../models/project-model')
+
 // @desc    Get projects
 // @route   GET /api/projects
 // @access  Private
 const getProjects = asyncHandler( async (req,res) => {
-    res.status(200).send({message: 'Get projects'});
+    const projects = await Project.find()
+    res.status(200).json(projects)
 })
 
 // @desc    Get projects by tag
@@ -18,32 +21,60 @@ const getProjectsByTag = asyncHandler( async (req,res) => {
 // @route   GET /api/projects/:id
 // @access  Private
 const getProjectById = asyncHandler( async (req,res) => {
-    res.status(200).send({message: `Get project with id ${req.params.id}`});
+    const project = await Project.findById(req.params.id)
+    if(!project) {
+        res.status(400)
+        throw new Error('Project not found')
+    }
+
+    res.status(200).send(updatedProject);
 })
 
-// @desc    Edit/Put a project
-// @route   GET /api/projects/:id
+// @desc    Create a project
+// @route   POST /api/projects/:id
 // @access  Private
 const postProject = asyncHandler( async (req,res) => {
-    if(!req.body.text){
+    if(!req.body.title){
         res.status(400)
-        throw new Error('Please add text field')
+        throw new Error('Please add title field')
     }
-    res.status(200).send({message: 'Create projects'});
+
+    const project = await Project.create({
+        title: req.body.title
+    })
+
+    res.status(200).send(project);
 })
 
-// @desc    Delete a project
-// @route   GET /api/projects/:id
+// @desc    Update a project
+// @route   PUT /api/projects/:id
 // @access  Private
 const putProject = asyncHandler( async (req,res) => {
-    res.status(200).send({message: `Update project ${req.params.id}`});
+    const project = await Project.findById(req.params.id)
+    if(!project) {
+        res.status(400)
+        throw new Error('Project not found')
+    } 
+    else if (!req.body.title){
+        res.status(400)
+        throw new Error('Please add title field')
+    }
+
+    const updatedProject = await Project.findByIdAndUpdate(req.params.id, req.body, {new: true})
+    res.status(200).send(updatedProject);
 })
 
-// @desc    Get projects
-// @route   GET /api/projects
+// @desc    Delete projects
+// @route   DELETE /api/projects
 // @access  Private
 const deleteProject = asyncHandler( async (req,res) => {
-    res.status(200).send({message: `Delete project ${req.params.id}`});
+    const project = await Project.findById(req.params.id)
+    if(!project) {
+        res.status(400)
+        throw new Error('Project not found')
+    }
+    await project.deleteOne()
+    res.status(200).json({message: `Project deleted`, id: req.params.id});
 })
 
 module.exports = {
