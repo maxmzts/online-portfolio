@@ -1,16 +1,23 @@
-import Hero from './sections/Hero/Hero';
-import About from './sections/About/About';
-import Projects from './sections/Projects/Projects';
-import Contact from './sections/Contact/Contact';
-import BackToTop from './components/BackToTop/BackToTop';
+import ProjectCard from "./components/ProjectCard/ProjectCard";
+import useFetchProjects from "../hooks/useFetchProjects";
 
-function Portfolio() {
-return (
-<main className="Portfolio">
-    <Projects/>
-</main>
-);
-}
+const Portfolio = () => {
+    const { projects, loading, error } = useFetchProjects();
+
+    if (loading) return <p>Loading...</p>;
+    if (error) return <p>Error: {error}</p>;
+
+    return (
+        <main className="portfolio-container">
+            <h1>My Portfolio</h1>
+            <div className="projects-grid">
+                {projects.map((project) => (
+                    <ProjectCard key={project.id} {...project} />
+                ))}
+            </div>
+        </main>
+    );
+};
 
 export default Portfolio;
   
