@@ -76,7 +76,7 @@ const putProject = asyncHandler( async (req,res) => {
 })
 
 // @desc    Delete projects
-// @route   DELETE /api/projects
+// @route   DELETE /api/projects/:id
 // @access  Private
 const deleteProject = asyncHandler( async (req,res) => {
     const project = await Project.findById(req.params.id)
