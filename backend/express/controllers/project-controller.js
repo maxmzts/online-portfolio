@@ -10,16 +10,26 @@ const getProjects = asyncHandler( async (req,res) => {
     res.status(200).json(projects)
 })
 
+// @desc    Get last 6 projects
+// @route   GET /api/projects/latest
+// @access  Public
+const getProjectsLatest = asyncHandler( async (req,res) => {
+    const projects = await Project.find()
+        .sort({ createdAt: -1 })    // sorts by creation date
+        .limit(6);                  // gets maximum 6 projects
+    res.status(200).json(projects)
+})
+
 // @desc    Get projects by tag
 // @route   GET /api/projects/tags/:tag
-// @access  Private
+// @access  Public
 const getProjectsByTag = asyncHandler( async (req,res) => {
     res.status(200).send({message: `Get projects tagged as ${req.params.tag}`});
 })
 
 // @desc    Get a project
 // @route   GET /api/projects/:id
-// @access  Private
+// @access  Public
 const getProjectById = asyncHandler( async (req,res) => {
     const project = await Project.findById(req.params.id)
     if(!project) {
@@ -40,7 +50,8 @@ const postProject = asyncHandler( async (req,res) => {
     }
 
     const project = await Project.create({
-        title: req.body.title
+        title: req.body.title,
+        user: req.user.id,
     })
 
     res.status(200).send(project);
@@ -79,6 +90,7 @@ const deleteProject = asyncHandler( async (req,res) => {
 
 module.exports = {
     getProjects,
+    getProjectsLatest,
     getProjectById,
     getProjectsByTag,
     postProject,

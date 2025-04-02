@@ -10,7 +10,8 @@ connectDB()
 app.use(express.json())
 app.use(express.urlencoded({extended: false}))
 
-app.use('/api/projects', require('./routes/projects-routes'))
+app.use('/api/projects', require('./routes/project-routes'))
+app.use('/api/users', require('./routes/user-routes'))
 
 app.use(errorHandler)
 
