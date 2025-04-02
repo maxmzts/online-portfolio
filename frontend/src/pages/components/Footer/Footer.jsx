@@ -1,6 +1,5 @@
 import React from 'react'
 import './Footer.css'
-import arrow_icon from '../../../assets/arrow.svg'
 import logo from '../../../assets/logo.svg'
 import user_icon from '../../../assets/user.svg'
 

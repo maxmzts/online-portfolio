@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import FormField from "./components/FormField";  
-import ErrorMessage from "./components/ErrorMessage";  
 
 function Register() {
   // Estado para almacenar los valores de los campos del formulario
